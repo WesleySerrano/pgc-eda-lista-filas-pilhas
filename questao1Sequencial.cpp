@@ -101,9 +101,19 @@ long removeFim(struct DequeSequencial* deque)
     return RETORNO;
 }
 
-void percorreDeque(struct DequeSequencial* deque)
+void buscaInicio(struct DequeSequencial* deque)
 {
     for(long i = 0; i < deque->contadorElementos; i++)
+    {
+        std::cout << deque->elementos[i] << " ";
+    }
+
+    std::cout << std::endl;
+}
+
+void buscaFim(struct DequeSequencial* deque)
+{
+    for(long i = deque->contadorElementos-1; i >= 0; i--)
     {
         std::cout << deque->elementos[i] << " ";
     }
@@ -124,9 +134,11 @@ int main(int argc, char* argv[])
     removeFim(deque);
     insereFim(deque, 400);
 
-    percorreDeque(deque);
+    buscaInicio(deque);
+    buscaFim(deque);
 
     std::cout << "Apagando deque\n";
+    delete deque->elementos;
     delete deque;
 
     return 0;
