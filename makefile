@@ -1,6 +1,6 @@
 COMPILER = g++ --std=c++17
 
-all: clean questao1Sequencial questao1Encadeada questao2 questao3 questao4a questao4b questao4c questao5a questao5b questao6
+all: clean questao1Sequencial questao1Encadeada questao2 questao3 questao4a questao4b questao4c questao5a questao5b questao6 questao7
 
 questao1Sequencial:
 	 $(COMPILER) -o questao1Sequencial.out questao1Sequencial.cpp
@@ -31,6 +31,9 @@ questao5b:
 
 questao6:
 	$(COMPILER) -o questao6.out questao6.cpp
+
+questao7:
+	$(COMPILER) -o questao7.out questao7.cpp
 
 clean:
 	rm *.out
