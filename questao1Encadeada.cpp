@@ -86,6 +86,8 @@ void insereInicio(long valor, struct DequeEncadeado* deque)
     deque->noCabeca = noDeque;
     deque->contadorElementos++;
     deque->noCabeca->proximo->anterior = deque->noCabeca;
+
+    if(deque->noFinal == NULL) deque->noFinal = noDeque;
 }
 
 void insereFim(long valor, struct DequeEncadeado* deque)

@@ -94,9 +94,7 @@ long removeFim(struct DequeSequencial* deque)
 {
     if(deque->contadorElementos == 0) exit(0);
 
-    const long RETORNO = deque->elementos[deque->contadorElementos];
-
-    deque->contadorElementos--;
+    const long RETORNO = deque->elementos[deque->contadorElementos--];
 
     return RETORNO;
 }
